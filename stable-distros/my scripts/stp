@@ -1,0 +1,13 @@
+
+  systemctl disable NetworkManager 
+   systemctl stop NetworkManager 
+ systemctl disable wpa_supplicant
+ systemctl stop wpa_supplicant
+ifconfig wlp2s0 down
+ macchanger -r -b  wlp2s0
+ macchanger -r -b enp3s0f1
+ macchanger -r -b lo
+ macchanger -r -b eth0
+systemctl mask NetworkManager
+ printf "\n ********NetworkManager stoped******* \n " 
+echo -e "\007"

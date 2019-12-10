@@ -1,0 +1,49 @@
+#!/bin/bash
+ver=x;
+x=1;
+f=10;
+#printf '\033[8;20;60t'
+
+
+z=0;
+a=0;
+p=0;
+while [ $x -eq 1 ]
+do
+clear
+ss -natu -s | dmenu -l 30 &
+
+#nslookup $(ss -natu | head -3 | tail -1 |  cut  -b60-74) | head -1
+#nslookup $(ss -natu | head -4 | tail -1 |  cut  -b60-74) | head -1
+#nslookup $(ss -natu | head -5 | tail -1 |  cut  -b60-74) | head -1
+#nslookup $(ss -natu | head -6 | tail -1 |  cut  -b60-74) | head -1
+
+y="$(awk 'END {print NR}' /proc/net/tcp)" 
+q="$(awk 'END {print NR}' /proc/net/icmp)"
+sleep 2;
+#if [ $y  -gt $z  ]
+#then
+##notify-send "tcp connected" 
+#echo -e "\a"; 
+#fi
+killall dmenu
+#if [ $b   -gt $a ]
+#then
+#notify-send udp connected;
+#echo -e "\a";
+
+#fi
+#if [ $q  -gt $p ]
+#then
+#notify-send icmp connected;
+#echo -e "\07";
+#fi
+
+
+sleep 1;
+z=$y;
+a=$b;
+p=$q;
+done
+
+     

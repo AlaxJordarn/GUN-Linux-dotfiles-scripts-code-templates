@@ -1,0 +1,19 @@
+ifconfig wlp2s0 down
+echo wifi
+  macchanger -r -b wlp2s0
+echo ethernet	
+  macchanger -r -b enp3s0f1
+  macchanger -r -b lo 
+  macchanger -r -b eth0
+
+#iptables-restore < /etc/iptables-new
+#ip6tables-restore < /etc/ip6tables-new
+systemctl unmask NetworkManager
+   systemctl enable NetworkManager  
+   systemctl start NetworkManager 
+ systemctl enable wpa_supplicant
+ systemctl start wpa_supplicant 
+ifconfig wlp2s0 up
+ 
+ printf  "\n *******NetworkManager started********** \n "
+echo -e "\a"

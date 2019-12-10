@@ -1,0 +1,6 @@
+ntfsfix /dev/sdb2
+ntfsfix /dev/sdb3
+ntfsfix /dev/sdb4
+ntfsfix /dev/sdb5
+ntfsfix /dev/sda2
+echo fixed and done

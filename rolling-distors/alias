@@ -1,0 +1,139 @@
+	alias ls='ls --color=auto'
+	alias grep='grep --colour=auto'
+	alias egrep='egrep --colour=auto'
+	alias fgrep='fgrep --colour=auto'
+alias ls='ls --color=auto'
+alias uname='uname -a'
+alias lsx='ls --color=auto -lh '
+alias lsd='ls -a --color=auto -d */'
+alias la='ls -a'
+alias ll='ls -la'
+alias l='ls' 					
+alias l.="ls -A | egrep '^\.'"      
+#alias ss='ss -natu0Spl   --vsock --xdp '
+alias cd..='cd ..'
+alias v='vim'
+alias sta='sudo sh /home/$(whoami)/my\ scripts/sta'
+alias stp='sudo sh /home/$(whoami)/"my scripts"/stp'
+alias re='sudo sh /home/$(whoami)/my\ scripts/re'
+alias pm='sh /home/$(whoami)/my\ scripts/pm.sh'
+alias p2='sh /home/$(whoami)/my\ scripts/p2.sh'
+alias p3='sh /home/$(whoami)/my\ scripts/p3.sh'
+alias fp='sh /home/$(whoami)/my\ scripts/fp.sh'
+alias ff='sh /home/$(whoami)/my\ scripts/ff.sh'
+alias f2='sh /home/$(whoami)/my\ scripts/f2.sh'
+alias ssx='ss -natu'
+alias sysx='systemctl'
+alias sysp='systemctl | grep service'
+alias tk='sudo sh /home/$(whoami)/my\ scripts/tk.sh'
+alias sf='sh /home/$(whoami)/my\ scripts/sf.sh'
+#alias sf='ssh-agent /home/$(whoami)/my\ scripts/sf.sh'
+alias sf2='sh /home/$(whoami)/my\ scripts/sf2.sh'
+alias surf='surf -sgta'
+alias rdt='sh /home/$(whoami)/my\ scripts/reddit.sh'
+alias fb='sh /home/$(whoami)/my\ scripts/facebook.sh'
+#alias irssiconf='nano w/palemoon/.irssi/config.RP4P8Z '
+alias newsboat='firejail newsboat -r'
+#alias newsboat='sh /home/$(whoami)/my\ scripts/newsboat.sh'
+alias news='sh /home/$(whoami)/my\ scripts/newsboat.sh'
+alias stor='sh /home/$(whoami)/my\ scripts/tor.sh'
+alias torset='sudo sh /home/$(whoami)/my\ scripts/ftor.sh'
+alias newsurls='nano w/palemoon/.newsboat/urls'
+alias newsconf='nano w/palemoon/.newsboat/config'
+alias mnt='sh /home/$(whoami)/my\ scripts/mnt'
+alias mnt2='sh /home/$(whoami)/my\ scripts/mnt2'
+alias mnd='cd /run/media/$(whoami)/ ; ls '
+alias lt='sh /home/$(whoami)/my\ scripts/light.sh'
+#alias lynx='firejail lynx -crawl    duckduckgo '
+alias lynx='firejail /usr/bin/lynx -crawl -dump '
+alias w3m='firejail w3m -no-cookie -graph -cols -num -4   www.duckduckgo.com'
+alias elinks='firejail elinks  -anonymous duckduckgo.com  '
+alias yv='ssh-agent /home/$(whoami)/my\ scripts/yt.sh'
+#alias yv='rm -rf .config/youtube-viewer; rm -rf .cache/youtube-viewer;  sh /home/$(whoami)/my\ scripts/youtube-viewer'
+#alias yv='rm -rf .cache/youtube-viewer ;  /usr/bin/vendor_perl/youtube-viewer'
+alias youtube-viewer='rm -rf .config/youtube-viewer; rm -rf .cache/youtube-viewer; echo "run 'yv' command"'
+alias pdw="pwd"
+alias man='firejail man'
+alias rtv='firejail rtv'
+alias nsup='bash /home/$(whoami)/my\ scripts/nslookup.sh'
+alias nanob='firejail nanob -i www.duckduckgo.com '
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias palemoon='firejail palemoon'
+alias fgrep='fgrep --color=auto'
+#alias facecam='sh /home/$(whoami)/my\ scripts/webcam.sh'
+alias facecam='firejail mpv  -geometry 420x240+1450+800  --demuxer-lavf-format video4linux2 --demuxer-lavf-o-set input_format=mjpeg av://v4l2:/dev/video0 '
+alias facerecord='ffmpeg -f v4l2 -framerate 25 -video_size 640x480 -i /dev/video0 Facecam-record-$(date +%Y)-$(date +%m)-$(date +%d){$(date +%T)}.mp4'
+#alias screenrecord='ffmpeg -y -f x11grab -s $(xdpyinfo | awk '/dimensions:/ { print $2; exit }')  -i :0.0 -f alsa -i default  ffmpeg-record-$(date +%Y)-$(date +%m)-$(date +%d){$(date +%T)}.mp4'
+alias mpa='firejail mpv --no-video '
+alias pullanime='ssh-agent ./scripttest/pullanime.sh '
+alias pullmusic='ssh-agent ./my\ scripts/pullmusic.sh'
+alias yt='ssh-agent ./my\ scripts/playlists.sh'
+alias ip2='firejail --quiet curl ifconfig.co'
+alias cuif='firejail --quiet curl ifconfig.co'
+alias yt-add='nano .config/.yt-playlist'
+alias mplayer='firejail mplayer -x 700 -y 390'
+alias mpv='firejail mpv '
+alias mpv2='firejail mpv --loop-file=200'
+alias myt='firejail  mpv --ytdl-format=best'
+alias workd='sh /home/$(whoami)/my\ scripts/workdir.sh'
+alias speedcheck='firejail curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python - '
+#alias updatedb='sudo sh /home/$(whoami)/my\ scripts/updatedb.sh'
+alias chess='firejail xboard -fcp gnuchess'
+alias curl='firejail --quiet curl' 
+alias udiskill='sudo killall udisksd'
+alias calcurse='firejail calcurse'
+alias lsofx='sudo sh /home/$(whoami)/my\ scripts/lsof'
+#alias news='firejail newsboat -r'
+alias irssi='sh /home/$(whoami)/my\ scripts/irc.sh'
+alias mp='firejail mplayer  -loop 100 -autosync 100 '
+alias vm='sh /home/$(whoami)/my\ scripts/vbox.sh'
+alias vb='sh /home/$(whoami)/my\ scripts/vbox'
+alias mac='echo wifi; macchanger -s wlp2s0; echo ethernet; macchanger -s  enp3s0f1; echo local ; macchanger -s lo'
+alias vol='amixer | head -5 |tail -1 |cut -d" " -f6'
+alias openconf='openbox --reconfigure'
+alias video='sh /home/$(whoami)/my\ scripts/videowatch'
+alias et='exit'
+alias df='df -h'
+alias wget='firejail wget -c'
+alias wgetx='firejail wget -qO- '
+alias wgeth='ssh-agent /home/$(whoami)/my\ scripts/wgeth.sh'
+alias curl='firejail curl '
+alias ls='ls -a --color=auto'
+alias mutt='firejail mutt'
+alias free="free -mt"
+alias hexchat='firejail hexchat'
+alias uac="sh ~/.bin/main/000*"
+alias aria2c="firejail aria2c -x 3 -c "
+alias aria2cx="firejail --private=/media/$(whoami)/VG/download/  aria2c -x 3 -c "
+#alias man='firejail --noprofile man'
+alias userlist="cut -d: -f1 /etc/passwd"
+alias merge="xrdb -merge ~/.Xresources"
+alias ps="ps af"
+alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+alias tor:='proxychains4'
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias fixpng="find . -type f -name "*.png" -exec convert {} -strip {} \;"
+alias fc='sudo fc-cache -fv'
+alias skel='cp -rf /etc/skel/* ~'
+alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
+alias kc='killall conky'
+alias hw="hwinfo --short"
+alias trizenskip='trizen -S --skipinteg'
+alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
+alias vbm="sudo mount -t vboxsf -o rw,uid=1000,gid=1000 Public /home/$USER/Public"
+shopt -s expand_aliases # expand aliases
+alias youtube-dl='firejail youtube-dl'
+alias ytd='firejail youtube-dl'
+alias yta-aac="youtube-dl --extract-audio --audio-format aac "
+alias yta-best="youtube-dl --extract-audio --audio-format best "
+alias yta-flac="youtube-dl --extract-audio --audio-format flac "
+alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
+alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
+alias yta-opus="youtube-dl --extract-audio --audio-format opus "
+alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
+alias yta-wav="youtube-dl --extract-audio --audio-format wav "
+alias ytv-best="youtube-dl -f bestvideo+bestaudio "
+alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -100"
+alias jctl="journalctl -p 3 -xb"
+#create a file called .bashrc-personal and put all your personal aliases

@@ -1,0 +1,92 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+# You can set compton to use either xrender or glx
+# Change if issues 
+#compton -b --config ~/.config/compton.conf &
+#compton -co 0.59
+#xfsettingsd --no-daemon & 
+#xrandr --output eDP1 --mode 1920x1080 --rate 59.93 &
+xrandr --output eDP1 --mode 1280x720 --rate 59.74 &
+# Set background image
+nitrogen --restore &
+
+tint2 &
+#sh ~/.config/polybar/launch.sh &
+
+#(am-conky-session --autostart) &
+
+#bluetooth#
+#killall (blueberry-tray) &
+
+# install xcape - press super to get menu
+#cape -e 'Super_L=Super_L|space'
+
+#on laptops without seperate numeric keyboard put hashtag in front
+numlockx &
+
+## GNOME PolicyKit authentication
+#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+killall /usr/lib/systemd/systemd 
+## Volume control for systray
+(volumeicon) &
+
+
+## Turn off/on System Beep
+xset b off
+
+## Enable power management
+#xfce4-power-manager &
+#xfce4-mouce
+##Clipboard Manager
+#(xfce4-clipman) &
+
+## XFCE4 Settings
+#xfsettingsd &
+
+#(nm-applet) &
+
+#(plank) &
+
+#(temps) &
+
+#redshift-gtk &
+xrandr --output eDP1 --brightness .9
+redshift -O 4000 &
+#discord &
+
+#killall xfsettingsd
+
+
+xbacklight -set 6% &
+amixer sset 'Master' 20% &
+
+
+
+#insync start &
+#sleep 1; nitrogen --restore
+#dropbox &
+#killall (pamac-tray) &
+#killall pamac 
+
+#killall blueberry-obex-agent
+#sleep .4;
+#xrandr --output eDP1 --mode 128-x720 --rate 59.74
+#nitrogen --restore
+termite &
+
+
+#sleep .4; conky -c .config/conky/Gotham &
+#sleep .5; conky -c .config/conky/Network\ Panel &
+#sleep .4; conky -c .config/conky/Process\ Panel &
+
+
+#sleep 5; killall pamac &
+#sleep 5; killall blueberry-tray &
+#sleep 5; killall pamac-tray &
+#sleep 5; killall pamac &
+#killall /usr/lib/bluetooth/obexd
+#xfsettingsd --no-daemon &
+

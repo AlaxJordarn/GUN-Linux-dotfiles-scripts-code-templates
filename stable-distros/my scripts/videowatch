@@ -1,0 +1,40 @@
+#x=1;
+#while [ $x -eq 1 ]
+#do
+#mplayer -loop 100 -fs Videos/"$(ls Videos/ | dmenu -l 30)"
+#mpv --geometry 700  390 Videos/"$(ls Videos/ | dmenu -l 30)"
+#feh --bg-scale /usr/share/backgrounds/arcolinux/"$(ls /usr/share/backgrounds/arcolinux/ | dmenu -l 30)"
+#$(echo -e "1920x1080\n1280x720" | dmenu -i -p  "chuse the screen resulation :" | xargs -I {} xrandr --outbut eDP1  --mode "{}
+#$(echo -e "Continue\nExit" | dmenu -i -p "do u want to exit")\ == "Exit" ] && $(killall bash)
+#done
+
+########################
+#alias mpv2='mpv --loop-file=200'
+
+y=$(echo   "mpv     \n    mplayer   \n     mpv --loop-file=200" | dmenu -i -p "Select a video player")
+if [ $y -eq ] 
+then 
+exit
+fi
+
+###### new version
+#video and mp3
+#x=$(echo "$(locate .mp4 &&  locate .mkv && locate .webm && locate .mp3  )"  |  dmenu -l 30)
+
+#only video 
+x=$(echo "$(locate -i .mp4 &&  locate -i .mkv && locate -i .webm &&  locate -i  .webm )"  |  dmenu -l 30)
+
+if [ $x -eq ] 
+then 
+exit
+fi
+
+firejail $y "$x" 
+
+
+######## old version
+#x=$(ls Videos/ | dmenu -l 30) 
+
+#$y Videos/"$x"
+
+

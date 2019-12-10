@@ -1,0 +1,15 @@
+/connect  irc.balckend.com chat.freenode.net
+/set name | user_name | nick
+
+#join channel:
+/join #chaannel
+/part
+
+#swich window:
+alt Number
+@username is admin
+/kick 
+/bannd
+
+change between server alt  
+channel list

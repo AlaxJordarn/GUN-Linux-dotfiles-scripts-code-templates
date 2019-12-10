@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Mascot
+GenericName=Mascot
+Icon=macopix
+Terminal=true
+TryExec=macopix
+Exec=macopix

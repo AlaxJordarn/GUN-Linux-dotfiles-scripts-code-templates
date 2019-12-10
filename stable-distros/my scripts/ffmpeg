@@ -1,0 +1,26 @@
+ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0+100,200 -f alsa -ac 2 -i hw:0 output.mkv
+
+ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0+100,200 output.mp4
+
+
+
+webcam
+1280x780
+mplayer -ontop -noborder -geometry 420x240+855+480 -tv driver=v4l2:width=320:height=240:device=/dev/video0 tv:// 
+
+1920x1080
+mplayer -ontop -noborder -geometry 420x240+1450+800 -tv driver=v4l2:width=320:height=240:device=/dev/video0 tv:// 
+
+1600x900
+mplayer -ontop -noborder -geometry 420x240+1178+660 -tv driver=v4l2:width=320:height=240:device=/dev/video0 tv:// 
+
+
+libavutil56 libavutil56 libavcodec58 libavformat58 libavdevice58 libavresample4 libpostproc55 libswscale5 libavfilter7 
+
+ffmpeg -y -f x11grab -s $(xdpyinfo | awk '/dimensions:/ { print $2; exit }')  -i :0.0 -f alsa -i default  'mv $f $$(xdg-user-dir PICTURES)'
+
+
+
+### record from direct webcam
+
+ffmpeg -f v4l2 -framerate 25 -video_size 640x480 -i /dev/video0 output.mkv

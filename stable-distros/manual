@@ -1,0 +1,88 @@
+This is an manual for my scripts folder
+text inside <> are alias inputed in .bashrc file 
+
+#special firejail script
+ #browser:
+ there are 3 types of scripts for browser
+ 
+Different types are:
+1.sandbox with a profile folder
+2.sandbox without a profile but can access mounted external partation
+3.full sandbox with all temperary setup
+
+<all can be run as alias if typed excluding '.sh'>
+_______________________________________
+
+browser   type 1    type 2      type 3
+________________________________________
+firefox:   ff.sh    f2.sh       fp.sh
+surf:               sf2.sh      sf.sh
+palemoon:  pm.sh    p3.sh       p2.sh
+luakit                          lf.sh
+netsurf                          ns.sh
+dillo                           dl.sh
+
+
+#cleaning scripts
+clean.sh archclean.sh s.sh  
+
+#systemd extra tasks disable
+systemd.sh new extra 
+#systemd extra tasks start back again
+new.fx  aptfix sr.sh
+
+####################
+# dmenu scripts 
+##################
+xrandr.sh             # sets screen resolution 
+#needs editing depending your screen & hardware
+
+nl.sh                  # night-light/eye-protection uses redshift
+file_find.sh           # searches what ever you want to open in vi or nano
+screen-record.sh       # records desktop
+
+webcam.sh              # records with webcam 
+#needs editing depending on your hardware
+
+pdffinder.sh           # searches pdf
+videoplayer            # searches and plays video
+videowatch             # plays video
+ss                     # views sockets
+
+
+###################
+#bspwm only scripts
+###################
+bspwm-gap.sh 
+
+#####
+#tor
+####
+requires installing tor and proxychains4
+ftor.sh     <alias torset>          # start tor service switch to tor iptables firewall refresh all sandboxs runing on the desktop
+tor.sh      <alias stor>           # launch sandbox browsers with tor proxy
+
+###########################
+#Natwork connection related
+########################### 
+smip.sh  #lets you selects different versions of firewall setting
+
+tk.sh    #kills all ports connected
+
+#views all ports connected and there information 
+nslookup.sh     <alias nsup>
+
+#networkmanager
+sta stp re      <can be run as alias>
+
+
+#others 
+playlists.sh    <alias yt>    #runs and plays playlists from clouds with mpv
+
+ntfs            <alias ntfs>  #fixes ntfs error on partation
+
+updatedb.sh                   #updates database
+
+
+#There are also templates and test scripts included too
+

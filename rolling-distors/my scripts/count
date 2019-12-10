@@ -1,0 +1,7 @@
+x=1;
+while [  $x -le 65534 ] 
+do
+x=$(( $x + 1 ));
+printf $x >> gay ;
+printf "," >> gay;
+done

@@ -1,0 +1,46 @@
+systemctl disable fwupd.service
+systemctl disable packagekit.service
+systemctl disable ModemManager.service 
+systemctl disable console-setup.service 
+systemctl disable bolt.service 
+systemctl disable systemd-timesyncd.service
+systemctl disable postfix@.service
+systemctl disable postfix@.service
+
+systemctl stop fwupd.service 
+systemctl stop packagekit.service
+systemctl stop ModemManager.service 
+systemctl stop console-setup.service 
+systemctl stop bolt.service 
+systemctl stop systemd-timesyncd.service 
+systemctl stop postfix@.service
+
+systemctl disable setvtrgb.service
+systemctl stop    setvtrgb.service
+
+systemctl disable kmod
+systemctl stop kmod
+
+
+systemctl mask fwupd.service
+systemctl mask packagekit.service
+systemctl mask ModemManager.service
+systemctl mask console-setup.service
+systemctl mask bolt.service
+systemctl mask systemd-timesyncd.service
+systemctl mask postfix@.service
+
+
+systemctl mask kmod 
+systemctl mask setvtrgb
+
+systemctl stop systemd-sysctl
+systemctl disable systemd-sysctl
+systemctl mask systemd-sysctl
+
+systemctl stop udisks2
+systemctl disable udisks2
+#systemd-remount-fs
+#systemd-modules-load
+#systemd
+#systemd-machined

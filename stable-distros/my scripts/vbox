@@ -1,0 +1,21 @@
+#systemctl unmask virtualbox
+
+#  systemctl start virtualbox.service
+#./stp
+#echo please wait 
+
+#echo its done
+#printf "please start vbox.sh "
+#sleep 5
+#  systemctl stop virtualbox.service
+# systemctl mask virtualbox
+#echo service stoped
+
+##################################
+#################################
+####### Arch Linux version #####
+###############################
+##############################
+
+sudo modprobe --verbose --force-vermagic vboxdrv
+udisksctl mount -b /dev/sdb4

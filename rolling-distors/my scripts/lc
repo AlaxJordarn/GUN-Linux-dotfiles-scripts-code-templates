@@ -1,0 +1,3 @@
+echo give the ammount of brightness 1 -200 
+read x;
+echo $x > /sys/class/backlight/intel_backlight/brightness

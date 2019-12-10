@@ -1,0 +1,35 @@
+  sudo systemctl stop systemd-udev-trigger
+
+  sudo systemctl stop kmod-static-nodes
+  sudo systemctl stop systemd-random-seed
+  sudo systemctl stop systemd-remount-fs
+sudo systemctl stop systemd-udev
+  sudo systemctl disable systemd-udev-trigger
+
+  sudo systemctl disable kmod-static-nodes
+  sudo systemctl disable systemd-random-seed
+  sudo systemctl disable systemd-remount-fs
+sudo systemctl disable systemd-udev
+
+
+
+
+ sudo systemctl disable systemd-journald
+ sudo systemctl disable systemd-journald-flush
+ sudo systemctl disable systemd-journal-flush
+ sudo systemctl disable systemd-journal-catalog-update
+ sudo systemctl stop systemd-journald-flush
+ sudo systemctl mask systemd-journald-flush
+ sudo systemctl mask systemd-journal-catalog-update
+ sudo systemctl mask systemd-journald
+ sudo systemctl stop systemd-journald
+ sudo systemctl stop systemd-journal-catalog-update
+ sudo systemctl stop systemd-journald-flush
+
+
+
+
+ sudo systemctl disable systemd-backlight@backlight:intel_backlight.service
+ sudo systemctl stop systemd-backlight@backlight:intel_backlight.service
+ sudo systemctl mask systemd-backlight@backlight:intel_backlight.service
+

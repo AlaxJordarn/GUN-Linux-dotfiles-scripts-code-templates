@@ -1,0 +1,4 @@
+echo past the link below
+read x;
+
+ mplayer -cookies -cookies-file /home/"$(whoami)"/work/cookie.txt $(youtube-dl -g --cookies /home/"$(whoami)"/work/cookie.txt $x)

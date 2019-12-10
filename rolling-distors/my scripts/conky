@@ -1,0 +1,4 @@
+killall conky
+conky -c .config/conky/Gotham &
+conky -c .config/conky/Network\ Panel &
+conky -c .config/conky/Process\ Panel &

@@ -1,0 +1,13 @@
+whatis apropos  cd / ls -lh size date & time -lu -lc
+
+grep -r grep J[0o][bB] *     grep 'job$' *    grep '^job' *
+ sshd httpd:appachi  mysqld:msql-server 
+  7    7   7 -chmod 
+rw-   r--   r--
+user group others
+
+umask 0777
+
+find /home/ -type f -iname myfile*  rm -i mv -i -i to prompt
+vim tutrial http://blog.interlinked.org/tutrials/vim_tutorial.html
+vimtutor  -command

@@ -1,0 +1,21 @@
+echo press 1 to mount 2 to unmount
+read y;
+
+if [ $y -eq 1 ]
+then
+echo give the mnt number
+read x;
+
+
+udisksctl mount -b /dev/sda$x
+ranger /run/media/"$(whoami)"/
+fi
+
+if [ $y -eq 2 ]
+then 
+echo give the mnt number
+read z;
+
+udisksctl unmount -b /dev/sda$z;
+fi
+

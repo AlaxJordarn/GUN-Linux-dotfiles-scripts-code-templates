@@ -1,0 +1,26 @@
+macaddress change:
+ifconfig eth0 down
+ifconfig eth0 hw ether de:ad:be:ef:f0:0d
+ifconfig eth0 up
+
+or try macchanger to change address
+ifconfig eth0 down
+macchanger -r eth0 
+ifconfig eth0 up
+nickname change:
+iwconfig ath0 nickname "fucko the clown"
+DHCP sending informations:
+VID=`fortune -o| head -c 30|tr "\"'\n" ' ' 2>/dev/null`
+/sbin/dhcpcd -i ${VID} ${dhcpcd_IFACE} ${IFACE}
+
+iptables -A INPUT -p tcp --dport ident -j DROP
+sudo /System/Library/StartupItems/mDNSResponder/mDNSResponder stop
+
+ls -laR / >dirty.list
+
+ls -laR /mnt/hdd > clean.list
+tripwire chkrootkit rkhunter(rootkit hunter) aide
+knoppix tiger john 
+/etc/tripwire/twcfg.txt
+
+proxychains.conf

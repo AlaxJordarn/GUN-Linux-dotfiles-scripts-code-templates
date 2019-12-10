@@ -1,0 +1,10 @@
+  #systemctl enable avahi-daemon
+ # systemctl enable systemd-resolved
+systemctl unmask systemd-resolved
+systemctl unmask packagekit
+systemctl restart  packagekit
+ 
+  systemctl restart avahi-daemon
+  systemctl restart systemd-resolved 
+echo "nameserver 8.8.8.8" |   tee /etc/resolv.conf > /dev/null
+echo "it's done"

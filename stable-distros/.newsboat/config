@@ -1,0 +1,57 @@
+#show-read-feeds no
+#auto-reload yes
+
+external-url-viewer "urlscan -dc -r 'linkhandler {}'"
+
+bind-key j down
+bind-key k up
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
+bind-key G end
+bind-key g home
+bind-key d pagedown
+bind-key u pageup
+bind-key l open
+bind-key h quit
+#bind-key backspace quit
+bind-key a toggle-article-read
+bind-key n next-unread
+bind-key N prev-unread
+bind-key D pb-download
+bind-key U show-urls
+bind-key x pb-delete
+#bind-key h quit 
+bind-key s save
+
+#auto-reload yes
+#reload-time 10
+#notify-always yes
+#notify-screen yes
+#notify-xterm yes
+#notify-program notify-send
+
+reload-threads 6
+#browser lynx
+player "firejail mpv"
+#cleanup-on-quit yes
+
+color listnormal cyan default
+color listfocus black yellow standout bold
+color listfocus_unread blue default
+color info red black bold
+color article cyan default
+
+browser "firejail palemoon" 
+macro o open-in-browser
+macro t set browser "tsp youtube-dl --add-metadata -ic"; open-in-browser ; set browser mplayer
+macro a set browser "tsp youtube-dl --add-metadata -xic -f bestaudio/best"; open-in-browser ; set browser linkhandler
+#video
+macro v set browser "mpv "; open-in-browser ; set browser lynx -crawl
+#music
+macro m set browser "setsid nohupu mpv --no-video"; open-in-browser ; set browser "lynx -crawl"
+macro w set browser "firejail w3m"; open-in-browser ; set browser "firejail lynx" 
+macro c set browser "firejail palemoon"; open-in-browser ; set browser "firejail lynx" 
+macro p set browser "dmenuhandler"; open-in-browser ; set browser lynx
+macro c set browser "xsel -b <<<" ; open-in-browser ; set browser "firejail lynx"

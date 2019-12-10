@@ -1,0 +1,7 @@
+#sh /home/"$(whoami)"/"my scripts"/stp
+#sh /home/"$(whoami)"/my\ scripts/sta
+./my\ scripts/stp
+./my\ scripts/sta
+
+
+
