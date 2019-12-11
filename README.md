@@ -2,51 +2,48 @@
 
 This repository has my scripts, templates and the dotfiles
 
-This time I have set all my script In one folder without sorting In default files if you are using my alias
-
-and and keyboard shortcut then please place the script folder as it is on to the user diractory. The
-
-alias and the keyboard shortcuts are all set to read from the my script directory.This repos has my
-
+This time I have set all my script In one folder without sorting In default files if you are using my alias <br>
+and and keyboard shortcut then please place the script folder as it is on to the user diractory. The <br>
+alias and the keyboard shortcuts are all set to read from the my script directory.This repos has my<br>
 Settings for:
 
-bspwm (window manager)
+    bspwm (window manager)
    
     zsh (shell)
     
     i3wm/i3-gaps (window manager)
     
     i3blocks (status bar)
+    
+    openbox (window manager)
    
-   openbox (window manager)
+    sxhkd (general key binder)
    
-   sxhkd (general key binder)
+    ranger (file manager)
    
-   ranger (file manager)
+    jwm(window manager)
    
-   jwm(window manager)
+    pekwm [used with sxhkd ]( window manager)
    
-   pekwm [used with sxhkd ]( window manager)
+    tint2 (status bar)
    
-   tint2 (status bar)
+    mpv (video player)
    
-   mpv (video player)
+    calcurse (calendar program)
    
-   calcurse (calendar program)
+    newsboat (rss feed reader) 
    
-   newsboat (rss feed reader) 
-   
-   .bashrc .Xdefaults file for terminal settings
+    . bashrc .Xdefaults file for terminal settings
    
    other stuff like xdg default programs, inputrc and more, etc.
 
-I try to minimize what's directly in ~ so:
+I try to minimize what's directly in ~ so: <br>
+All configs that can be in ~/.config/ are. & All scripts and templates can be in ~/my scripts/are. <br>
 
-All configs that can be in ~/.config/ are. & All scripts and templates can be in ~/my scripts/are.
 
-There are to manual files for both arch and debian distro my scripts
+There are to manual files for both arch and debian distro my scripts <br>
+text inside <> are alias inputed in .bashrc file<br>
 
-text inside <> are alias inputed in .bashrc file
 special firejail script
 
 browser:
@@ -55,11 +52,9 @@ there are 3 types of scripts for browser
 
 Different types are:
 
-1.sandbox with a profile folder
-
-2.sandbox without a profile but can access mounted external partation
-
-3.full sandbox with all temperary setup
+1.sandbox with a profile folder<br>
+2.sandbox without a profile but can access mounted external partation<br>
+3.full sandbox with all temperary setup<br>
 
 <all can be run as alias if typed excluding '.sh'>
 <table class="tg">
