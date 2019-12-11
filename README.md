@@ -52,9 +52,9 @@ there are 3 types of scripts for browser
 
 Different types are:
 
-1.sandbox with a profile folder<br>
-2.sandbox without a profile but can access mounted external partation<br>
-3.full sandbox with all temperary setup<br>
+1. sandbox with a profile folder<br>
+2. sandbox without a profile but can access mounted external partation<br>
+3. full sandbox with all temperary setup<br>
 
 <all can be run as alias if typed excluding '.sh'>
 <table class="tg">
