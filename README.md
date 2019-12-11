@@ -50,8 +50,7 @@ browser:
 
 there are 3 types of scripts for browser
 
-Different types are:
-
+Different types are: <br>
 1. sandbox with a profile folder<br>
 2. sandbox without a profile but can access mounted external partation<br>
 3. full sandbox with all temperary setup<br>
