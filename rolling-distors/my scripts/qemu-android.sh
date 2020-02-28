@@ -3,12 +3,12 @@
 firejail  --noprofile  \
 --private=disks/VG/"VirtualBox VMs"   \
  --protocol=unix,inet  --env=LD_LIBRARY_PATH=none  --hosts-file=/etc/hosts \
- --apparmor  --protocol=unix,inet   --private-cache --no3d --seccomp \
+ --apparmor  --protocol=unix,inet   --private-cache --seccomp \
  --read-only=all --noroot --debug --caps.drop=all --shell=none --ipc-namespace \
- --cpu=2 --apparmor --noexec=all --noexec=/tmp --nogroups --nonewprivs \
+  --apparmor --noexec=all --noexec=/tmp --nogroups --nonewprivs \
  --netfilter --blacklist=all --netfilter --netfilter=/etc/firejail/nolocal.net  \
  --private-opt=all --private-etc=hosts,ssl,ca-certificates \
- --private-tmp --dns=8.8.8.8 --dns=8.8.4.4 \
+ --private-tmp --dns=1.1.1.1  \
 qemu-system-x86_64 \
 -enable-kvm \
 -m 14048 \
