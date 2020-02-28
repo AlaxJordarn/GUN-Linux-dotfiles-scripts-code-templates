@@ -63,8 +63,8 @@ value="$(echo $(ls disks/VG/"VirtualBox VMs"/"VirtualBox VMs"/"iso s"| head -$z 
 firejail  --noprofile  \
 --private=disks/VG/"VirtualBox VMs"   \
 --protocol=unix,inet  --env=LD_LIBRARY_PATH=none  --hosts-file=/etc/hosts --apparmor    \
---private-cache --no3d --seccomp --read-only=all --noroot --debug \
---caps.drop=all --shell=none --ipc-namespace   --cpu=2 --apparmor --noexec=all \
+--private-cache --seccomp --read-only=all --noroot --debug \
+--caps.drop=all --shell=none --ipc-namespace   --apparmor --noexec=all \
  --noexec=/tmp --nogroups --nonewprivs --netfilter --blacklist=all --netfilter \
 --netfilter=/etc/firejail/nolocal.net  --private-opt=all \
 --private-etc=hosts,ssl,ca-certificates    --private-tmp --dns=8.8.8.8 --dns=8.8.4.4 \
