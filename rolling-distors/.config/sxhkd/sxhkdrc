@@ -277,8 +277,8 @@ XF86MonBrightnessDown
  xbacklight -dec 1
 #screen shot
 ctrl+@Print 
-      {scrot -s  'ArcoLinux_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES)' }
-#XF86Display exec scrot -s 'ArcoLinux_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES)'
+      {scrot -s  'scrot -s Pictures/Debian_%Y-%m-%d-%S_$wx$h.png' }
+#XF86Display exec scrot -s 'Linux_%Y-%m-%d-%S_$wx$h.png' -e 'mv $f $$(xdg-user-dir PICTURES)'
 
 #screen video record
 ctrl+shift+@Print 
