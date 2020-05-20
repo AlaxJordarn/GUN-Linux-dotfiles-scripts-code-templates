@@ -1,4 +1,4 @@
-# GUN-Linux-dotfiles-scripts-code-templates
+# Linux-dotfiles-scripts-code-templates
 
 This repository has my scripts, templates and the dotfiles
 
