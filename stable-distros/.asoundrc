@@ -27,3 +27,4 @@ pcm.device{
         device 0
 }
 #apt install libasound2-plugin-equal
+
