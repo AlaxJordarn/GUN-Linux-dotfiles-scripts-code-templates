@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+<JWM>
+
+   <!-- The root menu. -->
+    <!--    <RootMenu onroot="12">
+        <Program icon="terminal.png" label="Terminal">lxterminal</Program>
+        <Menu icon="Folder.png" label="Applications">
+            <Program icon="music.png" label="Audacious">audacious</Program>
+            <Program icon="calculator.png" label="Calculator">xcalc</Program>
+            <Program icon="gimp.png" label="Gimp">gimp</Program>
+            <Program icon="chat.png" label="Pidgin">pidgin</Program>
+            <Program icon="www.png" label="Firefox">firefox</Program>
+            <Program icon="editor.png" label="XEdit">xedit</Program>
+        </Menu>
+        <Menu icon="folder.png" label="Utilities">
+            <Program icon="font.png" label="Fonts">xfontsel</Program>
+            <Program icon="window.png" label="Window Properties">
+                xprop | xmessage -file -
+            </Program>
+            <Program icon="window.png" label="Window Information">
+                xwininfo | xmessage -file -
+            </Program>
+        </Menu>
+        <Separator/>
+        <Program icon="lock.png" label="Lock">
+            xlock -mode blank
+        </Program>
+        <Separator/>
+        <Restart label="Restart" icon="restart.png"/>
+        <Exit label="Exit" confirm="true" icon="quit.png"/>
+    </RootMenu>
+
+    <!-- Options for program groups. -->
+    <Group>
+        <Option>tiled</Option>
+        <Option>aerosnap</Option>
+    </Group>
+    <Group>
+        <Class>Pidgin</Class>
+        <Option>sticky</Option>
+    </Group>
+    <Group>
+        <Name>xterm</Name>
+        <Option>vmax</Option>
+    </Group> 
+    <Group>
+        <Name>lxterminal</Name>
+        <Option>vmax</Option>
+    </Group> 
+    <Group>
+        <Name>xclock</Name>
+        <Option>drag</Option>
+        <Option>notitle</Option>
+    </Group>  
+
+    <!-- Visual Styles -->
+    <WindowStyle>
+        <Font>sans10</Font>
+        <Width>4</Width>
+        <Height>21</Height>
+        <Corner>3</Corner>
+        <Foreground>#FFFFFF</Foreground>
+        <Background>#555555</Background>
+        <Outline>#000000</Outline>
+        <Opacity>0.5</Opacity>
+        <Active>
+            <Foreground>#FFFFFF</Foreground>
+            <Background>#0077CC</Background>
+            <Outline>#000000</Outline>
+            <Opacity>1.0</Opacity>
+        </Active>
+    </WindowStyle>
+    <TrayStyle group="true" list="all">
+        <Font>TerminusBOLD-10</Font>
+        <Background>#333333</Background>
+        <Foreground>#FFFFFF</Foreground>
+        <Outline>#000000</Outline>
+        <Opacity>1</Opacity>
+    </TrayStyle>
+    <TaskListStyle>
+      <Font>TerminusBOLD-10</Font>
+      <Active>
+        <Foreground>#FFFFFF</Foreground>
+        <Background>#555555</Background>
+      </Active>
+      <Foreground>#FFFFFF</Foreground>
+      <Background>#333333</Background>
+    </TaskListStyle>
+    <PagerStyle>
+        <Outline>#000000</Outline>
+        <Foreground>#555555</Foreground>
+        <Background>#333333</Background>
+        <Text>#FFFFFF</Text>
+        <Active>
+            <Foreground>#0077CC</Foreground>
+            <Background>#004488</Background>
+        </Active>
+    </PagerStyle>
+    <MenuStyle>
+        <Font>Sans-10</Font>
+        <Foreground>#FFFFFF</Foreground>
+        <Background>#333333</Background>
+        <Outline>#000000</Outline>
+        <Active>
+            <Foreground>#FFFFFF</Foreground>
+            <Background>#0077CC</Background>
+        </Active>
+        <Opacity>0.85</Opacity>
+    </MenuStyle>
+    <PopupStyle>
+        <Font>Sans-9</Font>
+        <Foreground>#000000</Foreground>
+        <Background>#999999</Background>
+    </PopupStyle>
+
+    <!-- Path where icons can be found.
+         IconPath can be listed multiple times to allow searching
+         for icons in multiple paths.
+      -->
+    <IconPath>
+        /usr/share/icons/wm-icons/32x32-aquafusion
+    </IconPath>
+    <IconPath>
+        /usr/share/jwm
+    </IconPath>
+
+    <!-- Virtual Desktops -->
+    <!-- Desktop tags can be contained within Desktops for desktop names. -->
+    <Desktops width="5" height="1">
+        <!-- Default background. Note that a Background tag can be
+              contained within a Desktop tag to give a specific background
+              for that desktop.
+         -->
+        <Background type="solid">#111111</Background>
+    </Desktops>
+
+    <!-- Double click speed (in milliseconds) -->
+    <DoubleClickSpeed>400</DoubleClickSpeed>
+
+    <!-- Double click delta (in pixels) -->
+    <DoubleClickDelta>3</DoubleClickDelta>
+
+    <!-- The focus model (sloppy or click) -->
+    <FocusModel>sloppy</FocusModel>
+
+    <!-- The snap mode (none, screen, or border) -->
+    <SnapMode distance="10">border</SnapMode>
+
+    <!-- The move mode (outline or opaque) -->
+    <MoveMode>opaque</MoveMode>
+
+    <!-- The resize mode (outline or opaque) -->
+    <ResizeMode>opaque</ResizeMode>
+    <!-- Key bindings -->
+    <Key key="Up">up</Key>
+    <Key key="Down">down</Key>
+    <Key key="Right">right</Key>
+    <Key key="Left">left</Key>
+    <Key key="h">left</Key>
+    <Key key="j">down</Key>
+    <Key key="k">up</Key>
+    <Key key="l">right</Key>
+    <Key key="Return">select</Key>
+    <Key key="Escape">escape</Key>
+
+    <Key mask="A" key="Tab">nextstacked</Key>
+    <Key mask="A" key="Escape">nextstacked</Key>
+    <Key mask="A" key="q">close</Key>
+    <Key mask="4" key="#">desktop#</Key>
+    <Key mask="A" key="F1">root:1</Key>
+    <Key mask="A" key="F2">window</Key>
+    <Key mask="4" key="s">maximize</Key>
+   <Key mask="A" key="x">rdesktop</Key>
+    <Key mask="A" key="z">ldesktop</Key>
+    <Key mask="A" key="Up">udesktop</Key>
+    <Key mask="A" key="Down">ddesktop</Key>
+    <Key mask="4" key="d">showdesktop</Key>
+       <Key mask="4S" key="n">sendl</Key>
+    <Key mask="4S" key="m">sendr</Key>
+ 
+    <Key mask="4" key="Up"> fullscreen</Key> 
+      <!-- Maximize to half screen with C-A-<arrow> -->
+  <Key mask="4" key="k">maxtop</Key>
+  <Key mask="4" key="j">maxbottom</Key>
+  <Key mask="4" key="l">maxright</Key>
+<Key mask="4" key="h">maxleft</Key>
+<Key mask="4" key="Left">maxv</Key>
+<Key mask="4" key="Right">maxh</Key>
+         <Key mask="A" key="m">rdesktop</Key>
+    <Key mask="A" key="n">ldesktop</Key>
+ 
+    <!-- reset alll -->
+    <Key mask="4S" key="r" > exec: /usr/bin/jwm -restart </Key>
+
+        <!--#####################################   Default key bind ################################-->
+<Key mask="4C"  key="Return">exec:    uxterm  </Key>
+<Key mask="4"   key="Return"> exec:  "$(cat /etc/term.sh)"   </Key>
+<Key mask="4"  key="t"> exec:   "$(cat /etc/term.sh)"  </Key>
+<Key mask="AC" key="t ">  exec:  xterm  </Key>
+<Key mask="4" key="space"> exec:	dmenu_run  </Key>
+<Key mask="4" key="e"> exec:    pcmanfm  </Key>
+<Key mask="4SC" key="q  "> exec: sh /home/$(whoami)/my\ scripts/pm.sh  </Key>
+<Key mask="4SA" key="w">  exec:   sh /home/$(whoami)/my\ scripts/p2.sh  </Key>
+<Key mask="4C" key="q">  exec: sh /home/$(whoami)/my\ scripts/sf.sh duckduckgo.com/lite  </Key>
+<Key mask="4C" key="w">  exec: sh /home/$(whoami)/my\ scripts/chromium.sh  </Key>
+<Key mask="4CS" key="w"> exec:  sh /home/$(whoami)/my\ scripts/gchrome.sh  </Key>
+<Key mask="ASC" key="w"> exec:  sh /home/$(whoami)/my\ scripts/fp.sh  </Key>
+<Key mask="4S" key="q"> exec: sh  /home/$(whoami)/my\ scripts/pu.sh  </Key>
+<Key mask="4" key="r"> exec:    rofi -show drun  </Key>
+<Key mask="4S" key="o">  exec: ./my\ scripts/sr2.sh reddit.com   </Key>
+<Key mask="4S" key="x"> exec:  "$(cat /etc/term.sh)" -e  " /home/$(whoami)/my\ scripts/newsboat.sh"  </Key>
+<Key mask="4S" key="c">  exec:  firejail /usr/bin/hexchat -n  </Key>
+<Key mask="4S" key="z">exec: "$(cat /etc/term.sh)" -e  htop    </Key>
+<Key mask="4" key="o"> exec:  ss -natup  | dmenu -l 50   </Key>
+<Key mask="4" key="z"> exec:  ss -natup  | dmenu -l 50   </Key>
+<Key mask="AS" key="p"> exec:  ss -ntaup | dmenu -l 50   </Key>
+<Key mask="4S" key="i"> exec:  "$(cat /etc/term.sh)" -e "bash  /home/$(whoami)/my\ scripts/yt.sh"   </Key>
+<Key mask="4S" key="p">  exec: "$(cat /etc/term.sh)" -e "sh /home/$(whoami)/my\ scripts/playlists.sh"   </Key>
+<Key mask="4S" key="s"> exec: /home/$(whoami)/my\ scripts/videowatch   </Key>
+<Key mask="4" key="x"> exec: echo    " temp: $(cat /sys/class/hwmon/hwmon*/temp*_input| cut -b 1-2 | head -2  | tail -1 )C \n $(top -bn1 -c1 -E Mib)  "  | dmenu -l 14 ;      </Key>
+<Key mask="4" key="p"> exec:  free -h  | dmenu -l 5    </Key>
+<Key mask="4" key="v"> exec:  "$(cat /etc/term.sh)" -e "vim /home/jerome/Desktop/"   </Key>
+<Key mask="4" key="c"> exec: </Key>
+<Key mask=""  key="F12" > exec:  amixer  set Master 1%+ unmute    </Key>
+<Key mask=""  key="F11">   exec:   amixer set Master 1%- unmute  </Key>
+<Key mask=""  key="F10">   exec:   amixer set Master toggle  </Key>
+<Key mask="" key="F5">  exec:  brightnessctl s 1-  </Key>
+<Key mask="" key="F6">   exec:  brightnessctl s 1+   </Key>
+<Key mask="XF86MonBrightnessUp"> exec:   brightnessctl s 1+  </Key>
+<Key mask="XF86MonBrightnessDown"> exec:   brightnessctl s  1-  </Key>
+<Key mask="C" key="Print">  exec:      scrot -s  'scrot -s Pictures/ArchLinux_%Y-%m-%d-%S_$wx$h.png'   </Key>
+<Key mask="SC" key="Print">  exec:       sh  /home/$(whoami)/my\ scripts/screen-record.sh   </Key>
+<Key mask="C" key="F7"> exec:     firejail 	mpv  -geometry 420x2401450800  --demuxer-lavf-format video4linux2 --demuxer-lavf-o-set input_format=mjpeg av://v4l2:/dev/video0    </Key>
+<Key mask="" key="F8">   exec:    sh /home/$(whoami)/my\ scripts/xrandr.sh  </Key>
+<Key mask="" key="F9">   exec:   sh /home/$(whoami)/my\ scripts/nl.sh  </Key>
+<Key mask="" key="F1"> exec:  /home/$(whoami)/my\ scripts/rofi-find.sh  </Key>
+
+   <!--#####################################   Default key bind  end ################################-->
+
+
+
+    <StartupCommand>killall wbar</StartupCommand>
+
+<StartupCommand>killall nm-applet </StartupCommand>
+<StartupCommand>killall /usr/lib/systemd/systemd </StartupCommand>
+<StartupCommand>numlockx </StartupCommand>
+<StartupCommand>xset b off</StartupCommand> 
+
+<StartupCommand>/home/$(whoami)/my\ scripts/xrandr-newmode.sh 1360 770 30</StartupCommand>
+<StartupCommand>sleep 2; brightnessctl s  80 </StartupCommand>
+
+<StartupCommand> wbar   </StartupCommand>
+
+<StartupCommand>xgamma -rgamma 1.3 -bgamma .9 -ggamma 1.3</StartupCommand>
+    <!--<StartupCommand>pulseaudio &</StartupCommand>-->
+
+
+    <!-- Tray at the bottom. -->
+       <Tray x="0" y="0" autohide="off">
+               <!--         <TrayButton icon="/usr/share/jwm/jwm-black.svg">root:1</TrayButton>  -->
+
+       <TrayButton icon=""></TrayButton>
+     
+             <Spacer width="2"/>
+        <TrayButton label="_">showdesktop</TrayButton>
+        <Spacer width="2"/>
+
+        <Pager labeled="true"/>
+
+        <TaskList maxwidth="256"/>
+
+        <Dock/>
+        <Clock format="%A %d %B       %r %Z  "><Button mask="123"></Button></Clock>
+    </Tray> 
+</JWM>
+
+
+<!-- cat /sys/class/power_supply/BAT0/capacity
+%I:%M %Z 
+    <StartupCommand>tint2 </StartupCommand> 
+ <StartupCommand> xrandr-newmode.sh 1800 1000 50</StartupCommand>  
+ <StartupCommand>sleep 3;  wbar </StartupCommand>
+<StartupCommand> xbacklight -set 14  </StartupCommand>
+<StartupCommand> amixer  set Master 40% unmute  </StartupCommand>
+
+<StartupCommand> pcmanfm --desktop    </StartupCommand> 
