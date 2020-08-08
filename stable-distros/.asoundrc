@@ -1,31 +1,29 @@
+ctl.equal {
+type equal;
+}
+pcm.plugequal {
+type equal;
+slave.pcm "plug:dmix"
+}
 pcm.!default {
-        type plug
-        slave.pcm "dmixer"
+type plug;
+slave.pcm plugequal;
 }
 
-pcm.dmixer {
-        type dmix               # http://www.alsa-project.org/alsa-doc/alsa-lib/pcm_plugins.html
-        ipc_key 17              # must be unique for each dmix definition
-        ipc_key_add_uid true    # add current uid to unique IPC key, users can use this simultaneously
-        slave {
-                channels 2              # 2 for stereo, 6 for surround51, 8 for surround71
-                pcm {
-                        nonblock true           # nonblocking open mode, read/write access unchanged
+#pcm_slave.usb480 {
+#    pcm "hw:1,0"
+#    rate 96000
+#}
 
-                        #format S16_LE
-                        format S32_LE
-                        rate 44100
-                        #rate 48000
-
-                        type hw
-                        card 0
-                        device 0
-                        #subdevice 0
-                }
-                period_time 0           # OSS?
-                period_size 1024        # OSS needs powers of 2
-                buffer_size 8192
-                #period_size: 11024     # mpd defaults
-                #buffer_size: 22048
-        }
+#pcm.rate_convert {
+#    type rate
+#    slave usb480
+#}
+pcm.device{
+        format S24_LE
+        rate 96000
+        type hw
+        card 0
+        device 0
 }
+#apt install libasound2-plugin-equal
